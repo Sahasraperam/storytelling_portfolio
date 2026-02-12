@@ -7,16 +7,12 @@ import Vision from "@/components/sections/Vision";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
 import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
-import CustomCursor from "@/components/ui/CustomCursor";
-import LoadingScreen from "@/components/ui/LoadingScreen";
 
 import Experience from "@/components/sections/Experience";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <LoadingScreen />
-      <CustomCursor />
       <ScrollProgressBar />
       <Navbar />
 
