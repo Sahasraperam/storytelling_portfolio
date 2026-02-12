@@ -14,9 +14,9 @@ export default function Contact() {
             transition={{ duration: 1 }}
           >
             <motion.p
-              className="text-gold-500 uppercase tracking-[0.6em] text-[10px] mb-6"
+              className="text-sunny-400 uppercase tracking-[0.6em] text-[10px] mb-6"
             >
-              Chapter 6: The Connection
+              Chapter 7: The Connection
             </motion.p>
             <h2 className="text-6xl md:text-8xl font-serif mb-8 text-white/90">
               Let&apos;s <span className="text-gradient">Connect</span>
@@ -28,8 +28,8 @@ export default function Contact() {
 
           <div className="space-y-8">
             <div className="flex items-center gap-6 group">
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-gold-500/20 group-hover:border-gold-500/50 transition-all duration-500">
-                <Mail className="w-8 h-8 text-gold-500" />
+              <div className="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-sunny-400/20 group-hover:border-sunny-400/50 transition-all duration-500">
+                <Mail className="w-8 h-8 text-sunny-400" />
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-widest text-neutral-500 mb-1">Direct Signal</p>
@@ -47,7 +47,7 @@ export default function Contact() {
                   href="#"
                   className="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 group"
                 >
-                  <div className="group-hover:scale-110 group-hover:text-gold-400 transition-all">
+                  <div className="group-hover:scale-110 group-hover:text-sunny-400 transition-all">
                     {social.icon}
                   </div>
                 </a>
@@ -62,7 +62,7 @@ export default function Contact() {
           transition={{ duration: 1 }}
           className="glass p-12 rounded-[3rem] border-white/5 relative overflow-hidden group"
         >
-          <div className="absolute -top-24 -right-24 w-48 h-48 bg-gold-500/5 rounded-full blur-[80px] group-hover:bg-gold-500/10 transition-colors" />
+          <div className="absolute -top-24 -right-24 w-48 h-48 bg-sunny-400/5 rounded-full blur-[80px] group-hover:bg-sunny-400/10 transition-colors" />
 
           <form className="space-y-8 relative z-10" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -71,7 +71,7 @@ export default function Contact() {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-all duration-500 hover:bg-white/[0.07]"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-sunny-400 focus:ring-1 focus:ring-sunny-400 transition-all duration-500 hover:bg-white/[0.07]"
                 />
               </div>
               <div className="space-y-3">
@@ -79,7 +79,7 @@ export default function Contact() {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-all duration-500 hover:bg-white/[0.07]"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-sunny-400 focus:ring-1 focus:ring-sunny-400 transition-all duration-500 hover:bg-white/[0.07]"
                 />
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function Contact() {
               <textarea
                 rows={5}
                 placeholder="Tell me about your vision..."
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-all duration-500 hover:bg-white/[0.07] resize-none"
+                className="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-sunny-400 focus:ring-1 focus:ring-sunny-400 transition-all duration-500 hover:bg-white/[0.07] resize-none"
               />
             </div>
             <button className="w-full relative group overflow-hidden bg-white text-black font-bold py-6 rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 flex items-center justify-center gap-4 shadow-[0_0_40px_rgba(255,255,255,0.1)]">

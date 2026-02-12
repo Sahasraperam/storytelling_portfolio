@@ -183,7 +183,7 @@ function Contact3D() {
     <group position={[-5, 5, -10]} ref={mesh}> {/* Deep in space */}
       <mesh>
         <torusKnotGeometry args={[3, 0.5, 200, 32]} />
-        <meshStandardMaterial color="#fbbf24" wireframe transparent opacity={0.1} />
+        <meshStandardMaterial color="#FFDE95" wireframe transparent opacity={0.15} />
       </mesh>
     </group>
   );
@@ -212,7 +212,7 @@ export default function Scene() {
           cellColor="#202020"
           sectionSize={5}
           sectionThickness={1.5}
-          sectionColor="#303030"
+          sectionColor="#2a4b60"
           fadeDistance={30}
         />
 

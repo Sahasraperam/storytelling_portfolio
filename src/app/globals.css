@@ -4,27 +4,32 @@
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --font-serif: var(--font-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-  --color-gold-50: #fffbeb;
-  --color-gold-100: #fef3c7;
-  --color-gold-200: #fde68a;
-  --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
+  /* Your New Palette */
+  --color-whale-900: #0d1821;
+  /* Darker shade for depth */
+  --color-whale-800: #1A3140;
+  /* Blue Whale (Main BG) */
+  --color-whale-700: #2a4b60;
+
+  --color-sunny-100: #fff9e6;
+  --color-sunny-300: #ffecb3;
+  --color-sunny-400: #FFDE95;
+  /* Sunny Veranda (Main Accent) */
+  --color-sunny-500: #e6c886;
+  --color-sunny-600: #b39b68;
 }
 
 :root {
-  --background: #050505;
+  --background: var(--color-whale-800);
   --foreground: #fafafa;
 }
 
 @layer base {
   body {
-    @apply bg-black text-white overflow-x-hidden;
+    /* Apply Blue Whale Background */
+    background-color: var(--color-whale-800);
+    color: white;
+    overflow-x: hidden;
   }
 
   h1,
@@ -36,17 +41,22 @@
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar to match theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-neutral-900;
+  background-color: var(--color-whale-900);
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-neutral-700 rounded-full hover:bg-gold-600 transition-colors;
+  background-color: var(--color-sunny-600);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-sunny-400);
 }
 
 /* Lenis requirements */
@@ -72,6 +82,16 @@ html.lenis body {
 }
 
 /* Cinematic Transitions */
+.text-gradient {
+  /* Gradient from Sunny Veranda to White */
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-sunny-300 via-sunny-400 to-white;
+}
+
+.glass {
+  /* Updated glass effect for the blue background */
+  @apply bg-whale-900/40 backdrop-blur-md border border-sunny-400/10;
+}
+
 .scene-transition {
   transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -86,13 +106,4 @@ html.lenis body {
 
 .text-reveal.in-view>span {
   @apply translate-y-0;
-}
-
-/* Glassmorphism utility */
-.glass {
-  @apply bg-white/5 backdrop-blur-lg border border-white/10;
-}
-
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-200 via-gold-400 to-gold-600;
 }

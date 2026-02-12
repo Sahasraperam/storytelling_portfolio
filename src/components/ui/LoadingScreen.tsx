@@ -36,7 +36,7 @@ export default function LoadingScreen() {
               initial={{ width: 0 }}
               animate={{ width: 200 }}
               transition={{ duration: 1.5, ease: 'easeInOut' }}
-              className="h-px bg-gold-500"
+              className="h-px bg-sunny-400"
             />
             <motion.p
               initial={{ opacity: 0, y: 10 }}

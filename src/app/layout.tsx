@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-black text-white selection:bg-amber-500/30 selection:text-amber-200`}
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-black text-white selection:bg-sunny-400/30 selection:text-sunny-100`}
       >
         <LenisProvider>
           <Scene />

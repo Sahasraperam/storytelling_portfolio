@@ -1,60 +1,72 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useRef, useLayoutEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronDown } from 'lucide-react';
 
 export default function Hero() {
+  const container = useRef(null);
+  const textRef = useRef(null);
+  const subRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      // Create a parallax effect where text moves slower than scroll
+      gsap.to(textRef.current, {
+        yPercent: 50,
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      gsap.to(subRef.current, {
+        yPercent: 100, // Moves faster
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+    }, container);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="hero" className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden z-10 pointer-events-none">
-      <div className="text-center px-4 pointer-events-auto">
-        <motion.p
-          initial={{ opacity: 0, letterSpacing: "0.2em" }}
-          animate={{ opacity: 1, letterSpacing: "0.4em" }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="text-gold-400 uppercase text-xs mb-8 font-medium"
-        >
-          Chapter 1: The Beginning
-        </motion.p>
+    <section ref={container} className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden z-10">
 
-        <motion.h1
-          initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1.5, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="text-5xl md:text-8xl font-serif mb-12 max-w-5xl mx-auto leading-[1.1]"
-        >
-          Hi, I’m <span className="text-gradient">Sahasra</span>.<br />
-          This is not just a portfolio.<br />
-          This is my story.
-        </motion.h1>
+      {/* Background Ambience (Sunny Glow) */}
+      <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] bg-sunny-400/10 rounded-full blur-[120px] pointer-events-none" />
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12"
-        >
-          {["I build intelligence.", "I build systems.", "I build the future."].map((text, i) => (
-            <span key={i} className="text-neutral-400 tracking-widest text-sm uppercase">
-              {text}
-            </span>
-          ))}
-        </motion.div>
+      <div className="text-center px-4 z-20">
+        <p ref={subRef} className="text-sunny-400 uppercase tracking-[0.3em] text-xs mb-8 font-medium">
+          Chapter 1: The Architect
+        </p>
+
+        <div ref={textRef}>
+          <h1 className="text-5xl md:text-8xl font-serif mb-8 max-w-5xl mx-auto leading-[1.1]">
+            I am <span className="text-gradient">Sahasra Peram</span>.
+          </h1>
+          <p className="text-xl md:text-2xl text-white/80 font-light max-w-2xl mx-auto leading-relaxed">
+            Structuring the abstract. Securing the invisible. <br />
+            <span className="text-sunny-300/80">Cybersecurity Specialist & Full Stack Engineer.</span>
+          </p>
+        </div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 3, duration: 1 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
-      >
-        <span className="text-neutral-600 uppercase tracking-[0.3em] text-[10px]">Begin Journey</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ChevronDown className="text-gold-500/50 w-6 h-6" />
-        </motion.div>
-      </motion.div>
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+        <span className="text-sunny-400/60 uppercase tracking-[0.3em] text-[10px]">Scroll to Decrypt</span>
+        <ChevronDown className="text-sunny-400 w-6 h-6 animate-bounce" />
+      </div>
     </section>
   );
 }

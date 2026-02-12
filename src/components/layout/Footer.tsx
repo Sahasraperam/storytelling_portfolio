@@ -8,9 +8,9 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-8 text-neutral-500 text-xs uppercase tracking-[0.2em]">
-          <a href="#hero" className="hover:text-gold-400 transition-colors">Start Over</a>
-          <a href="#" className="hover:text-gold-400 transition-colors">Privacy</a>
-          <a href="#" className="hover:text-gold-400 transition-colors">Legal</a>
+          <a href="#hero" className="hover:text-sunny-400 transition-colors">Start Over</a>
+          <a href="#" className="hover:text-sunny-400 transition-colors">Privacy</a>
+          <a href="#" className="hover:text-sunny-400 transition-colors">Legal</a>
         </div>
 
         <div className="text-neutral-500 text-xs tracking-widest">

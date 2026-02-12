@@ -10,6 +10,8 @@ import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
 import CustomCursor from "@/components/ui/CustomCursor";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 
+import Experience from "@/components/sections/Experience";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -19,6 +21,7 @@ export default function Home() {
       <Navbar />
 
       <Hero />
+      <Experience />
       <Journey />
       <Skills />
       <Projects />

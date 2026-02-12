@@ -6,9 +6,10 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { name: 'Beginning', href: '#hero' },
+  { name: 'Training', href: '#experience' },
+  { name: 'Builds', href: '#projects' },
   { name: 'Journey', href: '#journey' },
   { name: 'Powers', href: '#skills' },
-  { name: 'Adventures', href: '#projects' },
   { name: 'Vision', href: '#vision' },
   { name: 'Connect', href: '#contact' },
 ];
@@ -38,7 +39,7 @@ export default function Navbar() {
           <li key={item.name}>
             <a
               href={item.href}
-              className="text-xs uppercase tracking-[0.2em] text-neutral-400 hover:text-gold-400 transition-colors font-medium"
+              className="text-xs uppercase tracking-[0.2em] text-neutral-400 hover:text-sunny-400 transition-colors font-medium"
             >
               {item.name}
             </a>
