@@ -33,20 +33,23 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-widest text-neutral-500 mb-1">Direct Signal</p>
-                <span className="text-xl text-white font-serif">sahasra.peram.77@gmail.com</span>
+                <a href="mailto:sahasra.peram.77@gmail.com" className="text-xl text-white font-serif hover:text-sunny-400 transition-colors">
+                  sahasra.peram.77@gmail.com
+                </a>
               </div>
             </div>
 
             <div className="flex gap-4">
               {[
                 { icon: <Github className="w-6 h-6" />, label: "Github", href: "https://github.com/Sahasraperam" },
-                { icon: <Linkedin className="w-6 h-6" />, label: "LinkedIn", href: "https://www.linkedin.com/in/sahasra-peram-7813a4290/" }
+                { icon: <Linkedin className="w-6 h-6" />, label: "LinkedIn", href: "https://www.linkedin.com/in/sahasra-peram/" }
               ].map((social, i) => (
                 <a
                   key={i}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={social.label}
                   className="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 group"
                 >
                   <div className="group-hover:scale-110 group-hover:text-sunny-400 transition-all">

@@ -123,18 +123,14 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sunny-400 hover:text-sunny-300 transition-colors uppercase text-[10px] tracking-widest font-bold"
+                      className="flex items-center gap-2 text-sunny-400 hover:text-sunny-300 transition-colors uppercase text-xs tracking-widest font-bold"
                     >
                       <Github className="w-4 h-4" /> View Code
                     </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-white hover:text-sunny-100 transition-colors uppercase text-[10px] tracking-widest font-bold"
-                    >
+                    {/* You can add a live demo link here if hosted, otherwise comment it out */}
+                    {/* <a href={project.demo} className="flex items-center gap-2 text-white hover:text-sunny-100 transition-colors uppercase text-xs tracking-widest font-bold">
                       <ExternalLink className="w-4 h-4" /> Live Demo
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
