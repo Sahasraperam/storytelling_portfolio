@@ -56,10 +56,26 @@ export default function Hero() {
           <h1 className="text-5xl md:text-8xl font-serif mb-8 max-w-5xl mx-auto leading-[1.1]">
             I am <span className="text-gradient">Sahasra Peram</span>.
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/80 font-light max-w-2xl mx-auto leading-relaxed mb-12">
             Structuring the abstract. Securing the invisible. <br />
             <span className="text-sunny-300/80">Cybersecurity Specialist & Full Stack Engineer.</span>
           </p>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <a
+              href="#projects"
+              className="px-8 py-4 rounded-full bg-sunny-400 text-black font-bold tracking-widest text-xs uppercase hover:scale-105 transition-transform shadow-[0_0_20px_rgba(251,191,36,0.3)]"
+            >
+              View My Work
+            </a>
+            <a
+              href="/resume.pdf"
+              download
+              className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold tracking-widest text-xs uppercase hover:bg-white/10 transition-colors flex items-center gap-2"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
       </div>
 

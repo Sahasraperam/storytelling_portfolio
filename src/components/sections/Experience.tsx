@@ -52,6 +52,28 @@ export default function Experience() {
             Designed and implemented cybersecurity solutions focusing on threat awareness and security fundamentals under mentor guidance.
           </p>
         </div>
+
+        {/* Achievements & Certifications */}
+        <div className="exp-item relative pl-8 md:pl-0 pt-8">
+          <div className="absolute left-[-5px] md:left-[-33px] top-10 w-3 h-3 rounded-full bg-sunny-400 box-content border-4 border-whale-800 shadow-[0_0_15px_rgba(251,191,36,0.5)]" />
+          <span className="text-sunny-400 text-xs font-mono mb-2 block">2024 - 2025</span>
+          <h3 className="text-2xl font-serif text-white uppercase tracking-wider">Achievements & Training</h3>
+          <p className="text-sm text-neutral-400 mb-4">Milestones & Validations</p>
+          <ul className="text-neutral-300 leading-relaxed space-y-3 list-none">
+            <li className="flex gap-3 items-start">
+              <span className="text-sunny-400 mt-1">▹</span>
+              <span>Finalist in <strong>HackNight&apos;25</strong> - Competitive Hackathon</span>
+            </li>
+            <li className="flex gap-3 items-start">
+              <span className="text-sunny-400 mt-1">▹</span>
+              <span>Professional Certification: <strong>CISCO Cybersecurity</strong></span>
+            </li>
+            <li className="flex gap-3 items-start">
+              <span className="text-sunny-400 mt-1">▹</span>
+              <span>NPTEL Certification: <strong>Cloud Computing</strong></span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   )

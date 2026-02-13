@@ -8,25 +8,29 @@ const skills = [
     icon: <Code2 className="w-8 h-8" />,
     title: 'Full Stack',
     desc: 'The Architect',
-    details: 'Forging robust structures and intuitive interfaces with Next.js and TypeScript.'
+    details: 'Forging robust structures with React.js, Next.js, and Flask.',
+    stack: ['ReactJs', 'Flask', 'Next.js', 'TypeScript']
   },
   {
     icon: <Brain className="w-8 h-8" />,
     title: 'AI / ML',
     desc: 'The Predictor',
-    details: 'Building intelligent data pathways and integrating LLMs into core products.'
+    details: 'Integrating LLMs and OpenCV for intelligent vision and automation.',
+    stack: ['Python', 'OpenCV', 'PyTorch', 'TensorFlow']
   },
   {
     icon: <Shield className="w-8 h-8" />,
     title: 'Cybersecurity',
     desc: 'The Defender',
-    details: 'Standing as a guardian against threats, ensuring every byte is secure.'
+    details: 'Securing systems with heavy focus on network and cloud security.',
+    stack: ['C++', 'Java', 'Linux', 'Network Security']
   },
   {
     icon: <Cpu className="w-8 h-8" />,
-    title: 'Python / Backend',
+    title: 'Data & Cloud',
     desc: 'The Efficient',
-    details: 'Optimizing core machine logic for raw power and lightning execution.'
+    details: 'Optimizing data pathways with MongoDB and Firebase integration.',
+    stack: ['MongoDB', 'Firebase', 'SQL', 'GCP']
   }
 ];
 
@@ -69,7 +73,14 @@ export default function Skills() {
                 </div>
                 <h3 className="text-xl font-serif mb-2 text-white group-hover:text-sunny-200 transition-colors">{skill.title}</h3>
                 <p className="text-sunny-400 text-[10px] uppercase tracking-widest font-bold mb-3">{skill.desc}</p>
-                <p className="text-neutral-500 text-sm font-light leading-relaxed">{skill.details}</p>
+                <p className="text-neutral-500 text-sm font-light leading-relaxed mb-4">{skill.details}</p>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {skill.stack.map((item) => (
+                    <span key={item} className="text-[9px] px-2 py-1 rounded bg-white/5 border border-white/10 text-neutral-400">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}

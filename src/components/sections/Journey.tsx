@@ -18,15 +18,15 @@ const storySteps = [
   },
   {
     year: '2023',
-    title: 'The Architect',
-    description: 'I started building full-stack applications, moving from scripts to scalable systems. Every project was a lesson in resilience and design.',
-    category: 'Building'
+    title: 'Strategic Foundation',
+    description: 'Started my B.Tech in Computer Science and Engineering (Cyber Security) at SRM Institute of Science and Technology. Maintaining a CGPA of 9.0 while building full-stack applications.',
+    category: 'University'
   },
   {
-    year: '2024',
-    title: 'The Intelligence',
-    description: 'Currently deep-diving into AI/ML, integrating large language models into SaaS products to solve real-world problems.',
-    category: 'AI / SaaS'
+    year: '2025',
+    title: 'The Professional',
+    description: 'Transitioned into technical internships, applying cybersecurity fundamentals and building automated agents to solve workflow inefficiencies.',
+    category: 'Career / AI'
   }
 ];
 
