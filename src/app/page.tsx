@@ -11,9 +11,12 @@ import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
 
 import Experience from "@/components/sections/Experience";
 
+// Import the cinematic transition
+import CinematicTransition from "@/components/sections/CinematicTransition";
+
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#0a0a0a]">
       <ScrollProgressBar />
       <Navbar />
 
@@ -21,6 +24,10 @@ export default function Home() {
       <About />
       <Experience />
       <Journey />
+
+      {/* PLACED RIGHT BEFORE SKILLS (DIGITAL ARCHITECTURES) */}
+      <CinematicTransition />
+
       <Skills />
       <Projects />
       <Vision />

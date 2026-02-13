@@ -17,6 +17,11 @@
   /* Sunny Veranda (Main Accent) */
   --color-sunny-500: #e6c886;
   --color-sunny-600: #b39b68;
+
+  @keyframes shimmer {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+  }
 }
 
 :root {
